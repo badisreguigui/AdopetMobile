@@ -77,7 +77,7 @@ public class NewsfeedForm extends BaseForm {
         Image unselectedWalkthru = Image.createImage(size, size, 0);
         Graphics g = unselectedWalkthru.getGraphics();
         g.setColor(0xffffff);
-        g.setAlpha(100);
+       
         g.setAntiAliased(true);
         g.fillArc(0, 0, size, size, 0, 360);
         Image selectedWalkthru = Image.createImage(size, size, 0);
