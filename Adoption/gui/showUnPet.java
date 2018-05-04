@@ -1,7 +1,7 @@
 package com.mycompany.gui;
 
 //import java.util.logging.Logger;
-//import java.util.logging.Level;
+
 import com.codename1.components.ImageViewer;
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.SpanLabel;
