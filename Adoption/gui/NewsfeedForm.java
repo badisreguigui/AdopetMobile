@@ -96,6 +96,7 @@ public class NewsfeedForm extends BaseForm {
             radioContainer.add(rbs[iter]);
         }
                 
+        
         rbs[0].setSelected(true);
         swipe.addSelectionListener((i, ii) -> {
             if(!rbs[ii].isSelected()) {
