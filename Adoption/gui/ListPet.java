@@ -96,6 +96,7 @@ public class ListPet {
                int id = v.getId_pet();
                
                System.out.println(id);
+                System.out.println("egrgr");
                
                b.addActionListener(e -> {
                    new showUnPet(res, id).show();
