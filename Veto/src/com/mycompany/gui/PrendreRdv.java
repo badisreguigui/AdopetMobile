@@ -36,6 +36,7 @@ public class PrendreRdv {
         //*******************************Recuperer le produit selectionné*************************************************
         ServiceVeto sv1 = new ServiceVeto();
         Veto v = sv1.showVeto(id);
+         
         RDV r = new RDV();
      
         Toolbar tool = new Toolbar();
