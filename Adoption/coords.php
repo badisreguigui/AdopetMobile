@@ -23,7 +23,6 @@ function showPosition(position) {
 
 
 
-
 getLocation();
 </script>
 
