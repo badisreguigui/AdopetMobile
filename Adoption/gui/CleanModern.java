@@ -55,6 +55,7 @@ public class CleanModern {
         }
         new WalkthruForm(theme).show();
     }
+    
 
     public void stop() {
         current = Display.getInstance().getCurrent();
