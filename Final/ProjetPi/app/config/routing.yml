@@ -1,0 +1,35 @@
+
+pet_sitting:
+    resource: "@PetSittingBundle/Resources/config/routing.yml"
+    prefix:   /
+
+event:
+    resource: "@EventBundle/Resources/config/routing.yml"
+    prefix:   /
+
+adopt:
+    resource: "@AdoptBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pubs:
+    resource: "@PubsBundle/Resources/config/routing.yml"
+    prefix:   /api
+
+vets:
+    resource: "@VetsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+shop:
+    resource: "@ShopBundle/Resources/config/routing.yml"
+    prefix:   /
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

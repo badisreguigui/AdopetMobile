@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}
+            {% if is_granted('ROLE_VETO') %}
+        {% include(':Layout:Layout.html.twig') %}
+            {% endif %}
+            {% if is_granted('ROLE_MEMBRE') %}
+                {% include(':Layout:Layout.html.twig') %}
+            {% endif %}
+            {% if is_granted('ROLE_ADMIN') %}
+                {% include(':Layout:LayoutAdmin.html.twig') %}
+            {% endif %}
+
+
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

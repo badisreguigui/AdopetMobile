@@ -1,0 +1,68 @@
+{% extends ":Layout:layoutAdmin.html.twig" %}
+
+{% block content %}
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+
+
+            <div class="row">
+                <div class="col-lg-6" style="margin-left: 25%;">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Produit</strong>
+                        </div>
+                        <div class="card-body">
+                            <!-- Credit Card -->
+                            <div id="pay-invoice">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h3 class="text-center">Ajouter une Promotion</h3>
+                                    </div>
+                                    <hr>
+                                    <form action="" method="POST"  class="form-horizontal">
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="select" class=" form-control-label">Select</label></div>
+                                            <div class="col-12 col-md-9">
+                                                <select name="boutique" id="select" class="form-control">
+                                                    {% for boutique in boutiques %}
+                                                        <option  value="{{ boutique.Idboutique }}">
+                                                            {{ boutique.Nomboutique }}
+                                                        </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <input type="submit" name="add" value="Ajouter Promotion" class="btn btn-primary btn-sm">
+
+
+                                        <input type="submit" name="delete" value="Supprimer Promotion" class="btn btn-danger btn-sm">
+
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div> <!-- .card -->
+
+                </div><!--/.col-->
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </div><!-- .animated -->
+    </div><!-- .content -->
+
+
+{% endblock %}

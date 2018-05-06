@@ -1,0 +1,64 @@
+/*===========================================================================*/
+						/*Default Theme Color Start*/
+/*===========================================================================*/
+.cp-nav-holder .navbar-default .navbar-nav > li:before,.cp-nav-holder .navbar-nav li ul li:before,.cp-appointment-btn:before,.cp-banner-inner-box,.cp-btn-style1:before,.cp-btn-style2:before
+,.cp-services-item .icon-box,.cp-accordian-item .panel-heading .panel-title > a:after,.cp-appointment-holder .btn-submit,.cp-btn-style3:before,.cp-btn-style3:after
+,.cp-tabs-holder .nav-tabs > li > a,.cp-error-section form .btn-submitm.cp-coming-inner form .btn-submit,.cp-coming-inner form .btn-submit,.pagination-box .pagination > li.active a,
+.pagination-box .pagination > li > a:hover, .pagination-box .pagination > li > span:hover, .pagination-box .pagination > li > a:focus, .pagination-box .pagination > li > span:focus,
+.pagination-box .pagination > li:first-child > a,.pagination-box .pagination > li:first-child > span,.pagination-box .pagination > li:last-child > a,.pagination-box .pagination > li:last-child > span
+,.cp-date-box span,.cp-text .right-nav .share a,#cp-blog-slider .owl-controls .owl-nav [class*="owl-"],.cp-audio-item .audioplayer-bar-played,.cp-audio-item .audioplayer-playpause:hover, .cp-audio-item .audioplayer-playpause:focus,
+.audioplayer-playing .audioplayer-playpause a::before, .audioplayer-playing .audioplayer-playpause a::after,.tagcloud a:hover,
+.cp-btn-listing .nav-tabs > li.active > a, .cp-btn-listing .nav-tabs > li.active > a:hover, .cp-btn-listing .nav-tabs > li.active > a:focus,.cp-btn-listing .nav-tabs > li.active > a, .cp-btn-listing .nav-tabs > li.active a:hover, .cp-btn-listing .nav-tabs > li a:hover
+,.cp-range-slider-holder .ui-widget-header,.cp-contact-info-box2 .fa,.cp-tab-box .nav-tabs > li.active > a, .cp-tab-box .nav-tabs > li.active > a:hover, .cp-tab-box .nav-tabs > li.active > a:focus,.cp-tab-box .nav-tabs > li.active > a, .cp-tab-box .nav-tabs > li a:hover, .cp-tab-box .nav-tabs > li:hover > a
+,.cp-error-section form .btn-submit,.cp-pro-caption > ul > li > a{
+ 	background-color:#10b4ea; 
+
+ }
+
+/*
+Text Color Css*/
+.top-social-links li:hover a,.cp_side-navigation li:hover > a,.cp_side-navigation .navbar-nav .open .dropdown-menu > li:hover > a,.cp-heading h2,.cp-services-item .cp-text h3:hover a,.cp-veterinarians-box .cp-text span
+,.cp-news-box .cp-text .date,.cp-meta-listed li span,.cp-heading-style1_v1 .btn-holder a,.cp-recent-inner .cp-text .date,.widget-listed li:hover,.cp-footer-nav ul li:hover a,.cp-social-links li:hover .fa,.cp-facts-listd .micon
+,.cp-inner-banner-outer .breadcrumb li.active,.cp-price-inner .price span,.cp-featured-item:hover .fa,.cp-featured-item:hover .micon,.cp-featured-item:hover h3,.cp-btn-style3:hover,.cp-error-section h2,.cp-error-section .title
+,.cp-meta-listed li:hover,.cp-meta-listed li a:hover,.cp-meta-list .reply a,.widget-search2 form .btn-submit,.cp-blockquote:before,.cp-pro-item:hover .cp-text h3 a,.cp-pro-item .cp-text .price,.cp-pro-item .cp-listed a:hover
+,.cp-pro-detail-info .cp-text .cp-rating .fa,.pro-price .new,.cp-contact-info-box ul li:hover,.cp-contact-info-box ul li:hover a,.pro-social-links a:hover,.cp-career-listed h3,.cp-career-listed .cp-text h3,.cp-about-text h3,.categories-list .cp-social-links a:hover{
+	color:#10b4ea;
+}
+
+
+/*
+Border Color Css*/
+.cp-navigation-row .cp-nav-holder .navbar-nav li ul,.cp-navigation-row .cp-nav-holder .dropdown-menu ul{ 
+	border-left-color:#10b4ea;
+}
+.cp-appointment-btn:hover,.cp-btn-style1:before,.cp-btn-style2:before,.cp-welcome-thumb:after,.cp-heading-style1_v1 h2:after,.cp-btn-style3,.pagination-box .pagination > li.active a,
+.pagination-box .pagination > li > a:hover, .pagination-box .pagination > li > span:hover, .pagination-box .pagination > li > a:focus, .pagination-box .pagination > li > span:focus,.tagcloud a:hover,
+.pagination-box .pagination > li:first-child > a,.pagination-box .pagination > li:first-child > span,.pagination-box .pagination > li:last-child > a,.pagination-box .pagination > li:last-child > span,.cp-date-box,
+.cp-range-slider-holder .ui-slider .ui-slider-handle,.welcome-text-holder .cp-btn-style1,.cp-price-inner .cp-btn-style1:hover{
+	border-color: #10b4ea;
+}
+
+/*======================================
+Secondary Theme color 2 Css */
+.cp-banner-inner-box.bg3,.cp-services-item .icon-box.bg3,.cp-departments-section,.cp-accordian-item .panel-heading.bg2 .panel-title > a:after,.cp-contact-inner .cp-btn-style1:before,.cp-btn-style2:before,.cp-blog-item .cp-btn-style3:before,.cp-blog-item .cp-btn-style3:after,.cart-table-row .cp-btn-style1.btn-more,.cart-table-row .cp-btn-style1.btn-more:before
+,.cp-contact-info-box2 .bg2,.welcome-text-holder .cp-btn-style1:before,.widget-appointment .btn-submit:before,.widget-appointment .btn-submit:after,.cp-nav-holder .tooltip-inner{
+	background-color: #7178c6;
+}
+
+.cp-right-nav li,.cp-right-nav li a,.cp-right-nav li .btn-default,.cp_side-navigation #close a,.cp_side-navigation form .btn-submit,.welcome-text-holder span,.cp-veterinarians-box .more-links,.cp-testimonial-item .bottom-holder span
+,.cp-heading-style1_v2 .btn-holder a,.cp-heading-style1_v1 .btn-holder a,.cp-search-inner form .submit,.overlay-close .micon,.cp-blog-item .cp-btn-style3:hover,.cart-table-row .woocommerce .product-remove a,
+.cp-contact-inner input[type=text]:focus:not([readonly]) + label,.cp-contact-inner input[type=password]:focus:not([readonly]) + label,.cp-contact-inner input[type=email]:focus:not([readonly]) + label,.cp-contact-inner input[type=url]:focus:not([readonly]) + label,.cp-contact-inner input[type=time]:focus:not([readonly]) + label,.cp-contact-inner input[type=date]:focus:not([readonly]) + label,.cp-contact-inner input[type=tel]:focus:not([readonly]) + label,.cp-contact-inner textarea.materialize-textarea:focus:not([readonly]) + label
+,.widget-appointment .btn-submit:hover{
+	color: #7178c6;
+}
+
+.cp_side-navigation .caret,.cp-nav-holder .tooltip.top .tooltip-arrow{
+	border-top-color: #7178c6;
+}
+.cp-contact-inner form .btn-submit,.cp-btn-style2,.cp-blog-item .cp-btn-style3,.cart-table-row .cp-btn-style1.btn-more,.welcome-text-holder .cp-btn-style1,.widget-appointment .btn-submit{
+	border-color: #7178c6;
+}
+.cp-contact-inner input[type=text]:focus:not([readonly]),.cp-contact-inner input[type=password]:focus:not([readonly]),.cp-contact-inner input[type=email]:focus:not([readonly]),.cp-contact-inner input[type=url]:focus:not([readonly]),.cp-contact-inner input[type=time]:focus:not([readonly]),.cp-contact-inner input[type=date]:focus:not([readonly]),.cp-contact-inner input[type=datetime-local]:focus:not([readonly]),.cp-contact-inner input[type=tel]:focus:not([readonly]),.cp-contact-inner input[type=number]:focus:not([readonly]),.cp-contact-inner input[type=search]:focus:not([readonly]),.cp-contact-inner .input-field textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom-color: #7178c6;
+}
+

@@ -1,0 +1,72 @@
+
+
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Blog</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Pages</li>
+                    <li class="active">Blog</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Checkout Section Start-->
+        <section class="cp-checkout-section pd-t100">
+            <div class="container">
+                <!--Checkout Form Start-->
+                <form class="cp-checkout-form"  method="post">
+                    <div class="row">
+
+                        <!--Show Result Outer Start-->
+                        <div class="cp-show-result-outer">
+                            <div class="right-outer">
+                                <select name="type">
+                                    <option value="Autres">Autres</option>
+                                    <option value="Nourriture">Nourriture</option>
+                                    <option value="Dressage">Dressage</option>
+                                    <option value="Soins">Soins</option>
+
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+
+                                <label>Choisir une photo</label>
+                                <input type="file" name="image" id="file" class="button" required>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="inner-holder">
+                                <input type="text" value="{{pubs.description }}" name="desc" required >
+                            </div>
+                            <input type="submit" value="update" class="cp-btn-style3">
+                        </div>
+
+                    </div>
+                </form><!--Checkout Form End-->
+
+
+
+            </div>
+        </section><!--Checkout Section End-->
+
+        <!--Blog Section Start-->
+
+{% endblock content %}

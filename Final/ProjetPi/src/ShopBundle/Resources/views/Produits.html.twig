@@ -1,0 +1,243 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Online store</h2>
+                <!--Breadcrumb Start-->
+
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Product Page</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Products Section Start-->
+        <section class="cp-product-section pd-t100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--Show Result Outer Start-->
+                        <div class="col-md-3">
+
+
+                        </div><!--Show Result Outer End-->
+                            <div class="container">
+                                <div class="cp-coming-inner">
+                                    <form method="get">
+                                        <input type="text" id="search" class="widget widget-search widget-search2" name="s" value="" placeholder=" Cherchez-vous quelque chose ?" autocomplete="off" >
+
+                                        <a href="#" class="searchIcon aIco search" title="Search"></a>
+                                        <button class="btn-submit" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </form>
+
+                                </div>
+                            </div>
+                        <!--Tabs Holder Start-->
+                        <div class="cp-tabs-holder">
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="tab-01">
+                                    <ul class="navList" style="list-style:none;">
+
+                                    {% for produit in rate %}
+                                        <li style="" ><div class="" style="display:none;">{{ produit.nomproduit }}</div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="cp-pro-item">
+                                                <div class="cp-pro-img">
+
+                                                    <a href="{{ path('shop_produit', { 'id': produit.idproduit }) }}"><img src="{{ asset('images/Produits/'~produit.imageproduit) }}" width="50" height="50"></a>
+                                                    <!--Product Caption Start-->
+                                                    <div class="cp-pro-caption">
+                                                        <ul>
+                                                            <li class="pro-share-holder">
+                                                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                                                                <div class="pro-social-links">
+                                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                                                    <a href="#"><i class="fa fa-behance"></i></a>
+                                                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="share">
+                                                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div><!--Product Caption End-->
+                                                </div>
+                                                <div class="cp-text">
+                                                    <div class="top">
+                                                        <input id="image{{ produit.idproduit }}" hidden value="{{ asset('images/Produits/'~produit.imageproduit) }}">
+                                                        <h3><a href="product-detail.html" id="nomP{{ produit.idproduit }}">{{ produit.nomproduit }}</a></h3>
+                                                        {% if (produit.promotion==1) %}
+                                                        <span class="price" id="prix{{ produit.idproduit }}">{{ produit.prix*produit.taux/100 }}</span>
+                                                        {% else %}
+                                                        <span class="price" id="prix{{ produit.idproduit }}"  >{{ produit.prix }}</span>
+                                                        {% endif %}
+                                                        <p>(Prix en DT)</p>
+                                                    </div>
+                                                    {% if (produit.rate|round)==0 %}
+                                                        <span class="cp-rating">
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          </span>
+                                                    {% endif %}
+                                                    {% if (produit.rate|round)==1 %}
+                                                        <span class="cp-rating">
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          </span>
+                                                    {% endif %}
+                                                    {% if (produit.rate|round)==2 %}
+                                                        <span class="cp-rating">
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          </span>
+                                                    {% endif %}
+                                                    {% if (produit.rate|round)==3 %}
+                                                        <span class="cp-rating">
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          </span>
+                                                    {% endif %}
+                                                    {% if (produit.rate|round)==4 %}
+                                                        <span class="cp-rating">
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+								                          </span>
+                                                    {% endif %}
+                                                    {% if (produit.rate|round)==5 %}
+                                                        <span class="cp-rating">
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          	<i class="fa fa-star" aria-hidden="true"></i>
+								                          </span>
+                                                    {% endif %}
+                                                    <div class="cp-listed">
+                                                        <span><a onclick="AddCart({{ produit.idproduit }})" id="{{ produit.idproduit }}" class="{{ produit.idproduit }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                                                        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                                                           <script>
+                                                            $(".{{ produit.idproduit }}").hover(function(){
+                                                                $(this).html("+1");
+                                                            }, function(){
+                                                               $(this).mouseleave(function(){
+                                                                   $(this).html("<i class=\"fa fa-shopping-cart\" aria-hidden=\"true\"></i>");
+                                                               })
+                                                            });
+
+                                                            $(".{{ produit.idproduit }}").mouseleave(function(){
+                                                               // $(this).html("<i class=\"fa fa-shopping-cart\" aria-hidden=\"true\"></i>");
+                                                                $(this).html("hhh");
+                                                                alert("eeeeeeeeeeeeeeeeeeeeeeh");
+                                                            }, function(){
+                                                                // $("#logoaffich").hide();
+                                                            });
+                                                        </script>
+                                                        <span><a href="product.html"><i class="fa fa-link" aria-hidden="true"></i></a></span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                    </ul>
+                                </div>
+
+
+
+                                <script>
+                                    var cmpt = 0;
+                                    function AddCart(id) {
+
+                                                var urlEdit = "{{ path('addCartAjax', { 'id': "id" }) }}";
+                                                 urlEdit = urlEdit.replace("id", id);
+                                                $.ajax({
+                                                    method: 'POST',
+                                                    url: urlEdit,
+                                                    ifModified:true,
+                                                    success: function(d){
+                                                        var prixProduit = document.getElementById('prix'+id).innerHTML;
+                                                        var quantite = d.msg ;
+                                                        var TotalProduit = prixProduit*quantite;
+                                                        document.getElementById(id).innerHTML = "(" + d.msg+")";
+                                                        var prixTotal =  parseInt(document.getElementById('prixTotal').innerHTML) ;
+                                                        document.getElementById('prixTotal').innerHTML = parseInt(prixTotal);
+                                                        console.log(prixTotal);
+                                                        var image = document.getElementById("image"+id).value;
+                                                        console.log(image);
+                                                        if(quantite == 1){
+                                                            document.getElementById('catt').innerHTML += "<div class=\"cp-mega-listed\" ><div class=\"cp-mega-item\" >"+"<div class=\"cp-mega-img\">"+"<img src="+image+" width=\"100\" height=\"100\">"+"</div>"+"<div style='display: inline-block;' class='cp-text'>" + "<div class='top'><h3>" + document.getElementById('nomP'+id).innerHTML + "</h3><span class=\"price\">"+ document.getElementById('prix'+id).innerHTML +"DT"+"</span></div>"+"<div class='top'><h3>Quantite</h3>"+"<span class=\"price\">" +quantite+"</span></div>" +"<div class='top'><h3>Total</h3>"+"<span class=\"price\">" +TotalProduit+"DT</span></div>"+"</div></div></div>" ;
+                                                            prixTotal = parseInt(prixTotal) + parseInt(prixProduit);
+                                                            TotalProduit += prixProduit;
+                                                            document.getElementById("prixTotal").innerHTML = prixTotal +" DT";
+                                                            alert(document.getElementById('nomP'+id).innerHTML+" ajouté au panier")
+                                                        }
+                                                        else{
+                                                            document.getElementById("quantite"+id).innerHTML = quantite;
+                                                            document.getElementById("prixx"+id).innerHTML =  prixProduit*quantite+"DT";
+                                                            console.log("quantite: "+quantite+ "prixProduit"+ prixProduit+ "calcul: "+ prixProduit*quantite+ "  " + document.getElementById("prix"+id).innerHTML);
+                                                            TotalProduit += prixProduit;
+                                                            prixTotal = parseInt(prixTotal) + parseInt(prixProduit);
+                                                            document.getElementById("prixTotal").innerHTML = prixTotal +" DT";
+                                                            console.log(prixProduit + "       prixtotal"+prixTotal);
+                                                            alert(document.getElementById('nomP'+id).innerHTML+" +1")
+                                                        }
+                                                    }
+                                                });
+                                        }
+
+
+                                </script>
+
+
+
+                            </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+        </section><!--Products Section End-->
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $('#search').keyup(function(){
+            var valThis = $(this).val();
+            $('.navList>li').each(function(){
+                var text = $(this).text().toLowerCase();
+                (text.indexOf(valThis) == 0) ? $(this).show() : $(this).hide();
+            });
+        });
+    </script>
+
+{% endblock content %}

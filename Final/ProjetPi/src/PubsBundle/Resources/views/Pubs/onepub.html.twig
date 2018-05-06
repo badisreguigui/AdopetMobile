@@ -1,0 +1,100 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Blog</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Pages</li>
+                    <li class="active">Blog Detail</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Blog Section Start-->
+        <section class="cp-blog-section pd-t100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-12">
+                        <!--Blog Item Start-->
+                        {% for pubs in pubs %}
+                        <article class="cp-blog-item">
+                            <figure class="cp-thumb">
+                                <img src="{{ asset('images/'~pubs.image) }}"  alt="">
+
+                            </figure>
+                            <div class="cp-text">
+                                <div class="cp-date-box">
+                                    <span>{{ pubs.date[:2] }}</span>
+                                    {{ pubs.date[3:3] }}
+                                </div>
+                                <input hidden name="idpub1" value="{{ pubs.id }}">
+                                <div class="cp-inner">
+                                    <h3>{{ pubs.type }} </h3>
+                                    <div class="cp-top">
+                                        <ul class="cp-meta-listed">
+                                            <li><i class="fa fa-user" aria-hidden="true"></i> {{ pubs.username }}</li>
+                                            <li>
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                                {{ pubs.time }}
+                                            </li>
+                                        </ul>
+                                        <ul class="right-nav">
+                                            <li class="share share-push"><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                        <ul class="cp-social-links share-holder">
+
+
+                                        </ul>
+                                    </div>
+                                    <p>{{pubs.description }}</p>
+
+
+
+
+                                    <!--Form Box Start-->
+                                    <div class="cp-form-box">
+
+                                        <form action="form3.php" method="post">
+                                            <div class="row">
+
+                                                {% if pubs.iduser==userr %}
+                                                <div class="col-md-12 col-sm-12">
+                                                    <div class="inner-holder cp-btn-holder">
+                                                        <a href="{{ path('supprimerpub',{'id':pubs.id}) }}" class="cp-btn-style3">Supprimer</a>
+                                                        <a href="{{ path('modifpub',{'id':pubs.id}) }}" class="cp-btn-style3">Modifier</a>
+                                                        {% endif %}
+                                                    {% if pubs.iduser!=userr %}
+                                                        <a href="{{ path('signalerpub',{'idpub':pubs.id}) }}" class="cp-btn-style3">Signaler</a>                                                 </div>
+                                                </div>
+                                                    {% endif %}
+                                            </div>
+
+                                        </form>
+
+                                    </div><!--Form Box End-->
+                                </div>
+
+                            </div>
+                        </article><!--Blog Item End-->
+                            {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </section><!--Blog Section End-->
+
+    </div><!--Main Content End-->
+
+
+
+
+{% endblock content %}

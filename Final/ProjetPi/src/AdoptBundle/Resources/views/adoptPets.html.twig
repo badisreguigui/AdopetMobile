@@ -1,0 +1,167 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Online store</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">ADOPTION PETS</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Products Section Start-->
+        <section class="cp-product-section pd-t100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+
+                        <!--Tabs Holder Start-->
+                        <div class="cp-tabs-holder">
+                            <div class="row pretty-gallery">
+                                <ul class="navList" style="list-style:none;">
+                                {% for p in pets %}
+                                    <li style="" ><div class="" style="display:none;">{{ p.namePet }}</div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <!--Gallery Item Start-->
+                                        <figure class="cp-gallery-item">
+                                            <img src="{{ asset('images/'~p.petImage) }}"  alt="">
+                                            <figcaption class="cp-caption">
+                                                <div class="cp-inner">
+                                                    <a href="{{ path('adopt_myProfile',{'id': p.idPet }) }}" class="gallery-btn">{{ p.namePet }}</a>
+                                                    <h3>{{ p.breed }}</h3>
+                                                    <p>{{ p.description }}</p>
+                                                    <ul class="cp-gallery-meta">
+                                                        <li><a href="images/gallery/gallery-col3-img-01.jpg" data-rel="prettyPhoto"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </figcaption>
+                                        </figure><!--Gallery Item End-->
+                                    </div>
+                                    </li>
+                                {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!--PAGINATION START-->
+                        <div class="pagination-box">
+                            <nav>
+                                <ul class="pagination">
+                                    <li> <a href="#" aria-label="Previous"> <span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> </li>
+                                    <li><a href="#">1</a></li>
+                                    <li class="active"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li> <a href="#" aria-label="Next"> <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span> </a> </li>
+                                </ul>
+                            </nav>
+                        </div><!--PAGINATION END-->
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <!--Asidebar Content Start-->
+                        <aside class="cp-sidebar-outer">
+                            <!--Widget Start-->
+                            <div class="widget widget-search widget-search2">
+                                <form method="get">
+                                    <input type="text" placeholder="Search" id="search" name="rechercher"    required>
+                                    <button type="submit"  class="btn-submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div><!--Widget End-->
+
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                            <script>
+                                $('#search').keyup(function(){
+                                    var valThis = $(this).val();
+                                    $('.navList>li').each(function(){
+                                        var text = $(this).text().toLowerCase();
+                                        (text.indexOf(valThis) == 0) ? $(this).show() : $(this).hide();
+                                    });
+                                });
+                            </script>
+
+                            <!--Widget Start-->
+                            <div class="widget widget-recent-post">
+                                <h3>Recent posts</h3>
+                                <ul>
+                                    <li>
+                                        <div class="cp-recent-inner">
+                                            <figure class="cp-thumb">
+                                                <img src="images/recent-img-01.jpg" alt="">
+                                            </figure>
+                                            <div class="cp-text">
+                                                <span class="date">May 21, 2016</span>
+                                                <h5>Monday Morning </h5>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cp-recent-inner">
+                                            <figure class="cp-thumb">
+                                                <img src="images/recent-img-02.jpg" alt="">
+                                            </figure>
+                                            <div class="cp-text">
+                                                <span class="date">April 12, 2016</span>
+                                                <h5>Monday Morning </h5>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cp-recent-inner">
+                                            <figure class="cp-thumb">
+                                                <img src="images/recent-img-03.jpg" alt="">
+                                            </figure>
+                                            <div class="cp-text">
+                                                <span class="date">July 21, 2016</span>
+                                                <h5>Take A Tour </h5>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cp-recent-inner">
+                                            <figure class="cp-thumb">
+                                                <img src="images/recent-img-04.jpg" alt="">
+                                            </figure>
+                                            <div class="cp-text">
+                                                <span class="date">Aug 8, 2016</span>
+                                                <h5>Monday Morning </h5>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!--Widget End-->
+
+                            <!--Widget Start-->
+                            <div class="widget widget-categories">
+                                <h3>Categories</h3>
+                                <ul>
+                                    <li>Behavior <span>(09)</span></li>
+                                    <li>Cat Care  <span>(11)</span></li>
+                                    <li>Dog Care<span>(14)</span></li>
+                                    <li>Genral Care <span>(15)</span></li>
+                                    <li>General Health<span>(13)</span></li>
+                                    <li>CIBC Cure<span>(14)</span></li>
+                                </ul>
+                            </div><!--Widget End-->
+
+
+
+                        </aside><!--Asidebar Content End-->
+                    </div>
+                </div>
+
+            </div>
+        </section><!--Products Section End-->
+
+    </div><!--Main Content End-->
+{% endblock content %}

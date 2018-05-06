@@ -1,0 +1,87 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Our Veterinary</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Our Vets</li>
+                </ul><!--Breadcrumb End-->
+                <div class="navigation">
+                    {{ knp_pagination_render(users) }}
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="inner-holder">
+                        <input type="text" id="search" name="recherche" value="" placeholder="Search your nearest vet">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Gallery Section Start-->
+        <section class="cp-gallery-section pd-t100">
+
+            <div id="vets" class="container">
+
+                <div class="row pretty-gallery">
+                    <ul class="navList" style="list-style:none;">
+
+                    {% for u in users %}
+                        <li style="" ><div class="" style="display:none;">{{ u.gouvernorat }}</div>
+
+                            <div class="col-md-6 col-sm-12">
+                        <!--Gallery Item Start-->
+
+                        <figure class="cp-gallery-item">
+                            <img src="{{ asset('images/'~u.image) }}" alt="">
+
+                            <figcaption class="cp-caption">
+                                <div class="cp-inner">
+                                    <a href="{{  path('profilVeto',{'id': u.id} )  }}" class="gallery-btn">Dr {{ u.nom }} {{ u.prenom }}</a>
+                                    <p> {{ u.description[:150]}} (...)</p>
+                                    <ul class="cp-gallery-meta">
+                                        <li><a href="images/gallery/gallery-col2-img-01.jpg" data-rel="prettyPhoto"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </figcaption>
+                        </figure><!--Gallery Item End-->
+
+                    </div>
+
+                        </li>
+                    {% endfor %}
+                    </ul>
+            </div>
+
+            </div>
+
+        </section><!--Gallery Section End-->
+        <!--PAGINATION START-->
+       <!--PAGINATION END-->
+
+    </div><!--Main Content End-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $('#search').keyup(function(){
+            var valThis = $(this).val();
+            $('.navList>li').each(function(){
+                var text = $(this).text().toLowerCase();
+                (text.indexOf(valThis) == 0) ? $(this).show() : $(this).hide();
+            });
+        });
+    </script>
+
+
+
+{% endblock content %}

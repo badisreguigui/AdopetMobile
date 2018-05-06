@@ -1,0 +1,113 @@
+shop_homepage:
+    path:     /index
+    defaults: { _controller: ShopBundle:Default:index }
+
+shop_home:
+    path:     /home
+    defaults: { _controller: ShopBundle:Default:Layout }
+
+shop_admin:
+    path:     /admin
+    defaults: { _controller: ShopBundle:Default:LayoutAdmin }
+shop_store:
+    path:     /shop
+    defaults: { _controller: ShopBundle:Produit:Produits }
+
+shop_cart:
+    path:     /cart
+    defaults: { _controller: ShopBundle:Panier:AddProduct }
+
+addCartAjax:
+    path:     /cartAjax/{id}
+    defaults: { _controller: ShopBundle:Panier:AddProductAjax }
+
+
+shop_cart_show:
+    path:     /cart_show
+    defaults: { _controller: ShopBundle:Panier:AfficherPanier }
+
+shop_produit:
+    path:     /produit_detail
+    defaults: { _controller: ShopBundle:Produit:ProduitDetail }
+
+CartAffich:
+    path:     /AfficherCart
+    defaults: { _controller: ShopBundle:Produit:AfficherCart }
+
+Delete_Produit:
+    path:     /DeleteProduit{id}
+    defaults: { _controller: ShopBundle:Panier:delete }
+
+Delete_All:
+    path:     /DeleteAll
+    defaults: { _controller: ShopBundle:Panier:deleteAll }
+
+
+AddCommande:
+    path:     /commande
+    defaults: { _controller: ShopBundle:Panier:AddOrder }
+
+payement:
+    path:     /payement
+    defaults: { _controller: ShopBundle:Default:Payement }
+
+payer:
+    path:     /payer
+    defaults: { _controller: ShopBundle:Default:Payer }
+
+_update_line:
+    path:     /UpdateLine/{id}/{body}
+    defaults: { _controller: ShopBundle:Panier:UpdateLine }
+
+addProm:
+    path:     /addProm
+    defaults: { _controller: ShopBundle:Produit:addProm }
+
+filtrer:
+    path:     /filter
+    defaults: { _controller: ShopBundle:Produit:filterr }
+
+shop_Ajouter:
+    path:     /ajouter
+    defaults: { _controller: ShopBundle:Produit:Ajouter }
+
+shop_Afficher:
+    path:     /admin/afficher
+    defaults: { _controller: ShopBundle:Produit:showProduits }
+
+shop_Supprimer:
+    path:     /supprimer/{idproduit}
+    defaults: { _controller: ShopBundle:Produit:delete }
+
+shop_Modifier:
+    path:     /modifier
+    defaults: { _controller: ShopBundle:Produit:update }
+
+_fetchprod:
+    path:     /Fetch
+    defaults: { _controller: ShopBundle:Produit:fetch}
+
+
+shop_AjouterBoutique:
+    path:     /admin/ajouterBoutique
+    defaults: { _controller: ShopBundle:Boutique:AjouterBoutique }
+
+shop_AfficherBoutique:
+    path:     /admin/afficherBoutique
+    defaults: { _controller: ShopBundle:Boutique:showBoutiques }
+
+shop_SupprimerBoutique:
+    path:     /admin/supprimerBoutique/{idboutique}
+    defaults: { _controller: ShopBundle:Boutique:deleteBoutique }
+
+shop_ModifierBoutique:
+    path:     /admin/modifierBoutique
+    defaults: { _controller: ShopBundle:Boutique:updateBoutique }
+
+_fetchprodBoutique:
+    path:     /FetchBoutique
+    defaults: { _controller: ShopBundle:Boutique:fetchBoutique}
+
+accessDenied:
+    path:     /denied
+    defaults: { _controller: ShopBundle:Boutique:Denied }

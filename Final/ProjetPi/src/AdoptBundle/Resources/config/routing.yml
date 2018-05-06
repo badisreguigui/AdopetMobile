@@ -1,0 +1,75 @@
+adopt_homepage:
+    path:     /
+    defaults: { _controller: AdoptBundle:Default:index }
+
+adopt_redirect:
+    path:     /redirect
+    defaults: { _controller: AdoptBundle:Default:redirect }
+
+adopt_:
+    path:     /adopt
+    defaults: { _controller: AdoptBundle:Default:adopt }
+
+adopt_ajouter:
+    path:     /ajouterpet
+    defaults: { _controller: AdoptBundle:Pet:ajouterpet }
+
+adopt_modifier:
+    path:     /modifier/{id}/
+    defaults: { _controller: AdoptBundle:Pet:modifier }
+
+adopt_list:
+    path:     /listpet
+    defaults: { _controller: AdoptBundle:Pet:listpet }
+
+adopt_listpetBack:
+    path:     /listpetBack
+    defaults: { _controller: AdoptBundle:Pet:listpetBack }
+
+adopt_myProfile:
+    path:     /myProfile/{id}/
+    defaults: { _controller: AdoptBundle:Pet:myProfile }
+
+adopt_myPetProfile:
+    path:     /myPetProfile/{id}/
+    defaults: { _controller: AdoptBundle:Pet:myPetProfile }
+
+adopt_supprimerPet:
+    path:     /supprimerPet/{id}/
+    defaults: { _controller: AdoptBundle:Pet:supprimerPet }
+
+adopt_supprimerPetBack:
+    path:     /supprimerPetBack/{id}/
+    defaults: { _controller: AdoptBundle:Pet:supprimerPetBack }
+
+comment:
+    path:     /comment/{post_id}/{body}
+    defaults: { _controller: AdoptBundle:Pet:EcrireCommentaire }
+
+adopt_tinderr:
+    path:     /tinderr/{id}/
+    defaults: { _controller: AdoptBundle:Pet:tinderr }
+
+adopt_matchPet:
+    path:     /match/{idPet}/
+    defaults: { _controller: AdoptBundle:Pet:match }
+
+adopt_unmatchPet:
+    path:     /unmatch/{idPet}/
+    defaults: { _controller: AdoptBundle:Pet:unmatch }
+
+adopt_listmap:
+    path:     /listpetmap
+    defaults: { _controller: AdoptBundle:Pet:listpetmap }
+
+adopt_convertoxml:
+    path:     /convertoxml
+    defaults: { _controller: AdoptBundle:Pet:convertoxml }
+
+adopt_test:
+    path:     /test
+    defaults: { _controller: AdoptBundle:Pet:test }
+
+comment:
+    path:     /comment/{post_id}/{body}
+    defaults: { _controller: AdoptBundle:Pet:EcrireCommentaire }

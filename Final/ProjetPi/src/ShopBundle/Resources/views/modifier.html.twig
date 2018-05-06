@@ -1,0 +1,112 @@
+{% extends ":Layout:layoutAdmin.html.twig" %}
+
+{% block content %}
+
+    <!-- Right Panel -->
+
+
+    <!-- Header-->
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+
+
+            <div class="row">
+                <div class="col-lg-6" style="margin-left: 25%;">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Produit</strong>
+                        </div>
+                        <div class="card-body">
+                            <!-- Credit Card -->
+                            <div id="pay-invoice">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h3 class="text-center">Modifier un Produit</h3>
+                                    </div>
+                                    <hr>
+                                    <form action="{{ path('shop_Modifier') }}" method="post"  class="form-horizontal">
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nom</label></div>
+                                            <div class="col-12 col-md-9"><input type="text" value="{{ produit.nomproduit }}" id="text-input" name="nomproduit" placeholder="" class="form-control"></div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Description</label></div>
+                                            <div class="col-12 col-md-9"><textarea name="description" id="textarea-input" rows="9" placeholder="Content..." class="form-control">{{ produit.description }}</textarea></div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Prix</label></div>
+                                            <div class="col-12 col-md-9"><input type="number" id="text-input" name="prix" value="{{ produit.prix }}" placeholder="Prix" class="form-control"></div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Quantite</label></div>
+                                            <div class="col-12 col-md-9"><input type="number" id="text-input" name="quantite" min="1" value="{{ produit.quantite }}" placeholder="Quantite" class="form-control"></div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Race</label></div>
+                                            <div class="col-12 col-md-9"><input type="text" id="text-input" value="{{ produit.nomraceproduit }}" name="nomraceproduit" placeholder="Race" class="form-control"></div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="select" class=" form-control-label">Select</label></div>
+                                            <div class="col-12 col-md-9">
+                                                <select name="categ" id="select" class="form-control">
+                                                    <option selected="{{ produit.idcategorie.nomcategorie}}" value="{{ produit.idcategorie.idcategorie }}">{{ produit.idcategorie.nomcategorie}}</option>
+                                                    <option disabled >Les Autres Categories : </option>
+
+                                                    {% for categorie in categories %}
+
+                                                        <option value="{{ categorie.idcategorie }}">{{ categorie.nomcategorie }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="select" class=" form-control-label">Select</label></div>
+                                            <div class="col-12 col-md-9">
+                                                <select name="bout" id="select" class="form-control">
+                                                    <option selected="{{ produit.idboutiqueproduit.nomboutique}}" value="{{ produit.idboutiqueproduit.idboutique }}">{{ produit.idboutiqueproduit.nomboutique}}</option>
+                                                    <option disabled >Les Autres Boutiques : </option>
+
+                                                    {% for boutique in boutiques %}
+
+                                                        <option value="{{ boutique.idboutique }}">{{ boutique.nomboutique }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="file-input" class=" form-control-label">Image du Produit</label></div>
+                                            <input type="file" name="imageproduit" {{ produit.imageproduit }}>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-dot-circle-o"></i> Modifier
+                                        </button>
+                                        <input name="id" type="hidden" value="{{ produit.getIdproduit() }}">
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div> <!-- .card -->
+
+                </div><!--/.col-->
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </div><!-- .animated -->
+    </div><!-- .content -->
+
+
+{% endblock content %}

@@ -1,0 +1,176 @@
+
+
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Blog</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Pages</li>
+                    <li class="active">Blog</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+    <!--Checkout Section Start-->
+    <section class="cp-checkout-section pd-t100">
+    <div class="container">
+    <!--Checkout Form Start-->
+    <form class="cp-checkout-form" action="{{ path('pubs') }}" method="post">
+
+
+
+    <div class="row">
+        <div class="widget">
+            <h3>L'utilisateur le plus actif de notre application est {{ user.username }}.</h3>
+            <div> {{ socialButtons( { 'facebook': {'locale':'fr_FR', 'send':true}} ) }} </div>
+            <div class=" widget-author-inner">
+            </div>
+        </div><!--Widget End-->
+        <!--Show Result Outer Start-->
+        <div class="cp-show-result-outer">
+            <div class="right-outer">
+                <select name="type">
+                    <option value="Autres">Autres</option>
+                    <option value="Nourriture">Nourriture</option>
+                    <option value="Dressage">Dressage</option>
+                    <option value="Soins">Soins</option>
+
+
+                </select>
+
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="inner-holder">
+
+                <label>Choisir une photo</label>
+                <input type="file" name="image" id="file" class="button" required>
+
+            </div>
+
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <div class="inner-holder">
+                <input type="text" name="desc" required >
+            </div>
+            <input type="submit" class="cp-btn-style3">
+        </div>
+
+    </div>
+    </form><!--Checkout Form End-->
+
+
+
+    </div>
+    </section><!--Checkout Section End-->
+
+        <!--Blog Section Start-->
+        <section class="cp-blog-section pd-t100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ul class="navList" style="list-style:none;">
+                        {% for i in pub %}
+                            <li style="" ><div class="" style="display:none;">{{ i.username }}</div>
+                        <div class="col-md-12 col-sm-12">
+                            <!--Blog Item Start-->
+                            <article class="cp-blog-item">
+                                <figure class="cp-thumb">
+                                    <img src="{{ asset('images/'~i.image) }}"  alt="">
+
+                                </figure>
+                                <div class="cp-text">
+                                    <div class="cp-date-box">
+                                        <span>{{ i.date[:2] }}</span>
+                                        {{ i.date[3:3] }}
+                                    </div>
+                                    <div class="cp-inner">
+                                        <h3>{{ i.type }} </h3>
+                                        <div class="cp-top">
+                                            <ul class="cp-meta-listed">
+                                                <li><i class="fa fa-user" aria-hidden="true"></i> {{ i.username}}</li>
+                                                <li>
+                                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                                    {{ i.time }}
+                                                </li>
+                                            </ul>
+                                            <ul class="right-nav">
+                                                <li class="share share-push"><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
+                                            </ul>
+                                            <ul class="cp-social-links share-holder">
+                                                <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p>{{ i.description }}</p>
+                                        <a href="{{ path('onepub',{'id':i.id}) }}" class="cp-btn-style3">Détails</a>
+                                    </div>
+                                </div>
+                            </article><!--Blog Item End-->
+                        </div>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                        <!--PAGINATION START-->
+                        <div class="pagination-box">
+                            <nav>
+                                <ul class="pagination">
+                                    <li> <a href="#" aria-label="Previous"> <span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> </li>
+                                    <li><a href="#">1</a></li>
+                                    <li class="active"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li> <a href="#" aria-label="Next"> <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span> </a> </li>
+                                </ul>
+                            </nav>
+                        </div><!--PAGINATION END-->
+                    </div>
+                    <div class="col-md-3">
+                        <!--Asidebar Content Start-->
+                        <aside class="cp-sidebar-outer">
+                            <!--Widget Start-->
+                            <div class="widget widget-search widget-search2">
+                                <form method="get">
+                                    <input type="text" id="search" placeholder="Search" required>
+                                    <button type="submit"  class="btn-submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+
+
+                            </div><!--Widget End-->
+                            <a href="{{ path('pubs_stat') }}" class="cp-btn-style3">Statistiques</a>
+
+                        </aside><!--Asidebar Content End-->
+                    </div>
+                </div>
+
+            </div>
+        </section><!--Blog Section End-->
+
+    </div><!--Main Content End-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $('#search').keyup(function(){
+            var valThis = $(this).val();
+            $('.navList>li').each(function(){
+                var text = $(this).text().toLowerCase();
+                (text.indexOf(valThis) == 0) ? $(this).show() : $(this).hide();
+            });
+        });
+    </script>
+{% endblock content %}

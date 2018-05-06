@@ -1,0 +1,61 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner" xmlns="">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Make an Appointment</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home / Profil</a></li>
+                    <li class="active">Appointment</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Checkout Section Start-->
+        <section class="cp-checkout-section pd-t100">
+            <div class="container">
+                <!--Checkout Form Start-->
+                <form class="cp-checkout-form" method="post">
+                    <div class="row">
+
+
+                        <div class="col-md-12 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Appointment's time</label>
+                                <input type="number" name="heure"  required >
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Appointment's date</label>
+                                <input type="date" name="date_rdv" required>
+                            </div>
+                        </div>
+
+
+
+                        <div class="cp-cart-bottom">
+                            <input class="cp-btn-style1 btn-more" type="submit" value="Valider" >
+
+                            <a href="{{  path('list')  }}" class="cp-btn-style3">Go to the Home Page</a>
+                        </div><!--Cart Bottom Holder End-->
+                    </div>
+                </form><!--Checkout Form End-->
+
+
+            </div>
+        </section><!--Checkout Section End-->
+
+    </div><!--Main Content End-->
+
+
+{% endblock content %}

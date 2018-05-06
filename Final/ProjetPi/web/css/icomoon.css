@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?b6bwli');
+    src:    url('../fonts/icomoon.eot?b6bwli#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?b6bwli') format('truetype'),
+        url('../fonts/icomoon.woff?b6bwli') format('woff'),
+        url('../fonts/icomoon.svg?b6bwli#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add-button:before {
+    content: "\e900";
+}
+.icon-animal:before {
+    content: "\e901";
+}
+.icon-animals:before {
+    content: "\e902";
+}
+.icon-close:before {
+    content: "\e903";
+}
+.icon-doctor:before {
+    content: "\e904";
+}
+.icon-doctor-stethoscope:before {
+    content: "\e905";
+}
+.icon-dog:before {
+    content: "\e906";
+}
+.icon-dog-food-bowl:before {
+    content: "\e907";
+}
+.icon-favorite:before {
+    content: "\e908";
+}
+.icon-medical3:before {
+    content: "\e909";
+}
+.icon-medical4:before {
+    content: "\e90a";
+}
+.icon-medical1:before {
+    content: "\e90b";
+}
+.icon-medical2:before {
+    content: "\e90c";
+}
+.icon-medical32:before {
+    content: "\e90d";
+}
+.icon-medical:before {
+    content: "\e90e";
+}
+.icon-menu:before {
+    content: "\e90f";
+}
+.icon-nature:before {
+    content: "\e910";
+}
+.icon-next-page:before {
+    content: "\e911";
+}
+.icon-phone-call:before {
+    content: "\e912";
+}
+.icon-search:before {
+    content: "\e913";
+}
+.icon-sitting-dog:before {
+    content: "\e914";
+}
+.icon-smiling-emoticon-square-face:before {
+    content: "\e915";
+}
+.icon-tool2:before {
+    content: "\e916";
+}
+.icon-tool:before {
+    content: "\e917";
+}
+.icon-walking-the-dog:before {
+    content: "\e918";
+}
+

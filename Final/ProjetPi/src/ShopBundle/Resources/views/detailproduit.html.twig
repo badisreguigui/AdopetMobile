@@ -1,0 +1,358 @@
+{% extends ':Layout:Layout.html.twig' %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Online store</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Product Detail</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Products Section Start-->
+        <section class="cp-product-section pd-t100">
+            <div class="container">
+                <!--Product Detail Info Start-->
+
+                <div class="cp-pro-detail-info">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="cp-product-slider2 pretty-gallery">
+                                <div class="owl-carousel" id="cp_product-slider">
+                                    <div class="item">
+                                        <img src="{{ asset('images/Produits/'~produit.imageproduit) }}" alt=""/>
+                                        <a href="{{ asset('images/Produits/'~produit.imageproduit) }}" data-rel="prettyPhoto"><i class="fa fa-arrows"></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{ asset('images/Produits/'~produit.imageproduit) }}" alt=""/>
+                                        <a href="{{ asset('images/Produits/'~produit.imageproduit) }}" data-rel="prettyPhoto"><i class="fa fa-arrows"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="cp-text">
+                                <h3>{{ produit.nomproduit }}</h3>
+                                <div class="cp-top">
+
+                                    {{ form_start(f) }}
+                                    {{ form_widget(f.rating) }}
+                                    {{ form_end(f) }}
+                                </div>
+                                <div class="pro-price">
+                                    <span class="new">{{ produit.prix }}DT</span>
+                                </div>
+                                <ul class="categories-list">
+                                    <li>Share :
+                                        <span class="cp-social-links">
+			                          <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+			                          <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+			                          <a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+			                          <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+			                          <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+			                          <a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
+			                        </span>
+                                    </li>
+                                </ul>
+                                <div class="product-quantity">
+                                    Quantity
+                                    <div class="input-append spinner" data-trigger="spinner">
+                                        <span class="spin-down" data-spin="down"><i class="fa fa-minus"></i></span>
+                                        <input type="text" value="0" data-rule="quantity">
+                                        <span class="spin-up" data-spin="up"><i class="fa fa-plus"></i></span>
+                                    </div>
+                                </div>
+                                <a href="#" class="cp-btn-style3">Add To cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--Product Detail Info End-->
+
+                <!--Product Tab Box Start-->
+                <div class="cp-tab-box cp-product-tabs">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#cp_tab1" role="tab" data-toggle="tab">Description</a></li>
+                        <li><a href="#cp_tab2" role="tab" data-toggle="tab">Reviews(3)</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active fade in" id="cp_tab1">
+                            <div class="cp-tab-info-box">
+                                <div class="cp-tab-text">
+                                    <p>{{ produit.description }}</p>
+                                    </div>
+                                <!--Product Related Outer Start-->
+                                <div class="cp-pro-related-outer">
+                                    <h3>Related Product</h3>
+                                    <!--Related Product Slider Start-->
+                                    <div id="cp_relted-slider" class="owl-carousel">
+                                        <div class="item">
+                                            <div class="cp-pro-item">
+                                                <div class="cp-pro-img">
+                                                    <img src="{{ asset('images/product/pro-img-01.jpg') }}" alt="">
+                                                    <!--Product Caption Start-->
+                                                    <div class="cp-pro-caption">
+                                                        <ul>
+                                                            <li class="pro-share-holder">
+                                                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                                                                <div class="pro-social-links">
+                                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                                                    <a href="#"><i class="fa fa-behance"></i></a>
+                                                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="share">
+                                                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div><!--Product Caption End-->
+                                                </div>
+                                                <div class="cp-text">
+                                                    <div class="top">
+                                                        <h3><a href="product-detail.html">Friskies Cat food</a></h3>
+                                                        <span class="price">$50.00</span>
+                                                    </div>
+
+                                                    <div class="cp-listed">
+                                                        <span><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                                                        <span><a href="product.html"><i class="fa fa-link" aria-hidden="true"></i></a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cp-pro-item">
+                                                <div class="cp-pro-img">
+                                                    <img src="{{ asset('images/product/pro-img-02.jpg') }}" alt="">
+                                                    <!--Product Caption Start-->
+                                                    <div class="cp-pro-caption">
+                                                        <ul>
+                                                            <li class="pro-share-holder">
+                                                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                                                                <div class="pro-social-links">
+                                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                                                    <a href="#"><i class="fa fa-behance"></i></a>
+                                                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="share">
+                                                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div><!--Product Caption End-->
+                                                </div>
+                                                <div class="cp-text">
+                                                    <div class="top">
+                                                        <h3><a href="product-detail.html">Dog food</a></h3>
+                                                        <span class="price">$50.00</span>
+                                                    </div>
+                                                    <span class="cp-rating">
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+							                          </span>
+                                                    <div class="cp-listed">
+                                                        <span><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                                                        <span><a href="product.html"><i class="fa fa-link" aria-hidden="true"></i></a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cp-pro-item">
+                                                <div class="cp-pro-img">
+                                                    <img src="{{ asset('images/product/pro-img-03.jpg') }}" alt="">
+                                                    <!--Product Caption Start-->
+                                                    <div class="cp-pro-caption">
+                                                        <ul>
+                                                            <li class="pro-share-holder">
+                                                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                                                                <div class="pro-social-links">
+                                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                                                    <a href="#"><i class="fa fa-behance"></i></a>
+                                                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="share">
+                                                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div><!--Product Caption End-->
+                                                </div>
+                                                <div class="cp-text">
+                                                    <div class="top">
+                                                        <h3><a href="product-detail.html">Bissel Pet</a></h3>
+                                                        <span class="price">$50.00</span>
+                                                    </div>
+                                                    <span class="cp-rating">
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+							                          </span>
+                                                    <div class="cp-listed">
+                                                        <span><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                                                        <span><a href="product.html"><i class="fa fa-link" aria-hidden="true"></i></a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cp-pro-item">
+                                                <div class="cp-pro-img">
+                                                    <img src="{{ asset('images/product/pro-img-04.jpg') }}" alt="">
+                                                    <!--Product Caption Start-->
+                                                    <div class="cp-pro-caption">
+                                                        <ul>
+                                                            <li class="pro-share-holder">
+                                                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                                                                <div class="pro-social-links">
+                                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                                                    <a href="#"><i class="fa fa-behance"></i></a>
+                                                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="share">
+                                                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div><!--Product Caption End-->
+                                                </div>
+                                                <div class="cp-text">
+                                                    <div class="top">
+                                                        <h3><a href="product-detail.html">Hen food</a></h3>
+                                                        <span class="price">$50.00</span>
+                                                    </div>
+                                                    <span class="cp-rating">
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+							                          </span>
+                                                    <div class="cp-listed">
+                                                        <span><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                                                        <span><a href="product.html"><i class="fa fa-link" aria-hidden="true"></i></a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cp-pro-item">
+                                                <div class="cp-pro-img">
+                                                    <img src="{{ asset('images/product/pro-img-05.jpg') }}" alt="">
+                                                    <!--Product Caption Start-->
+                                                    <div class="cp-pro-caption">
+                                                        <ul>
+                                                            <li class="pro-share-holder">
+                                                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                                                                <div class="pro-social-links">
+                                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                                                    <a href="#"><i class="fa fa-behance"></i></a>
+                                                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="share">
+                                                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div><!--Product Caption End-->
+                                                </div>
+                                                <div class="cp-text">
+                                                    <div class="top">
+                                                        <h3><a href="product-detail.html">Friskies Cat food</a></h3>
+                                                        <span class="price">$50.00</span>
+                                                    </div>
+                                                    <span class="cp-rating">
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star" aria-hidden="true"></i>
+							                          	<i class="fa fa-star-o" aria-hidden="true"></i>
+							                          </span>
+                                                    <div class="cp-listed">
+                                                        <span><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                                                        <span><a href="product.html"><i class="fa fa-link" aria-hidden="true"></i></a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--Related Product Slider End-->
+                                </div><!--Product Related Outer End-->
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="cp_tab2">
+                            <div class="cp-tab-info-box">
+                                <!--Comment List Start-->
+                                <ul class="cp-comments-holder">
+                                    <li>
+                                        <!--Comments Box Start-->
+                                        <div class="cp-comments-box">
+                                            <div class="cp-round-img">
+                                                <img src="{{ asset('images/comments-sm-img1.jpg') }}" alt="">
+                                            </div>
+                                            <div class="cp-text">
+                                                <h5>Miche hassy</h5>
+                                                <ul class="cp-meta-list">
+                                                    <li>March 18,2016</li>
+                                                </ul>
+                                                <p>Aenean  arcu tortor, suscipit vitae,Aenean arcu tortor, suscipit vitae,Aenean arcu tortor, suscipit vitae,Aenean arcu torto.vitae,Aenean arcu tortor, suscipit vitae,Aenean arcu torto</p>
+                                            </div>
+                                        </div><!--Comments Box End-->
+                                    </li>
+                                    <li>
+                                        <!--Comments Box Start-->
+                                        <div class="cp-comments-box">
+                                            <div class="cp-round-img">
+                                                <img src="{{ asset('images/comments-sm-img2.jpg') }}" alt="">
+                                            </div>
+                                            <div class="cp-text">
+                                                <h5>David Mate</h5>
+                                                <ul class="cp-meta-list">
+                                                    <li>April 18,2016</li>
+                                                </ul>
+                                                <p>Aenean  arcu tortor, suscipit vitae,Aenean arcu tortor, suscipit vitae,Aenean arcu tortor, suscipit vitae,Aenean arcu torto.vitae,Aenean arcu tortor, suscipit vitae,Aenean arcu torto</p>
+                                            </div>
+                                        </div><!--Comments Box End-->
+                                    </li>
+                                    <li>
+                                        <!--Comments Box Start-->
+                                        <div class="cp-comments-box">
+                                            <div class="cp-round-img">
+                                                <img src="{{ asset('images/comments-sm-img3.jpg') }}" alt="">
+                                            </div>
+                                            <div class="cp-text">
+                                                <h5>Niky Bard</h5>
+                                                <ul class="cp-meta-list">
+                                                    <li>May 18,2016</li>
+                                                </ul>
+                                                <p>Aenean  arcu tortor, suscipit vitae,Aenean arcu tortor, suscipit vitae,Aenean arcu tortor, suscipit vitae,Aenean arcu torto.vitae,Aenean arcu tortor, suscipit vitae,Aenean arcu torto</p>
+                                            </div>
+                                        </div><!--Comments Box End-->
+                                    </li>
+                                </ul><!--Comment List End-->
+                            </div>
+                        </div>
+                    </div>
+                </div><!--Product Tab Box End-->
+            </div>
+        </section><!--Products Section End-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+
+{% endblock content %}

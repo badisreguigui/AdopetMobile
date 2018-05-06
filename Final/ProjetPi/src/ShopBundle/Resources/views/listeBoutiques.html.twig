@@ -1,0 +1,67 @@
+{% extends ":Layout:LayoutAdmin.html.twig" %}
+
+{% block content %}
+
+    <div class="content mt-3">
+
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title">Liste des Boutiques</strong>
+
+            </div>
+            <div class="card-header">
+                <a href="{{ path('shop_AjouterBoutique') }}">+ Ajouter une boutique</a>
+            </div>
+
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Telephone</th>
+                        <th scope="col">Adresse</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">  </th>
+                        <th scope="col">  </th>
+                    </tr>
+                    </thead>
+                    {% for boutique in boutiques %}
+                        <tbody>
+                        <tr>
+                            <td >
+                                {{ boutique.nomboutique }}
+                            </td>
+                            <td>
+                                {{ boutique.telboutique }}
+                            </td>
+                            <td>
+                                {{  boutique.adresseboutique }}
+                            </td>
+                            <td>
+                                <img src="{{ asset('images/Produits/'~boutique.imageboutique) }}" width="50" height="50">
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" href="{{ path('_fetchprodBoutique', { 'idboutique': boutique.idboutique }) }}">Modifier</a>
+
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" href="{{ path('shop_SupprimerBoutique', { 'idboutique': boutique.idboutique }) }}">Supprimer</a>
+
+                            </td>
+
+                        </tr>
+
+
+
+
+
+
+                        </tbody>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

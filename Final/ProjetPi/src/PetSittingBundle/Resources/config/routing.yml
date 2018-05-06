@@ -1,0 +1,7 @@
+pet_sitting_homepage:
+    path:     /
+    defaults: { _controller: PetSittingBundle:Default:index }
+
+pet_sitting_:
+    path:     /petsit
+    defaults: { _controller: PetSittingBundle:Default:petsit }

@@ -1,0 +1,787 @@
+/*===========================================================================*/
+							/*300px CSS*/
+/*===========================================================================*/
+@media (max-width: 300px){
+.cp-banner-content .inner{
+	display: none;
+}
+.cp-banner-inner-box{
+	padding: 40px 15px;
+}
+.cp-banner-inner-box h3{
+	font-size: 18px;
+}
+.cp-opening-hours li{
+	font-size: 16px;
+}
+.cp-banner-inner-box .phone{
+	font-size: 18px;
+}
+.cp-wrapper .cp-heading h2{
+	font-size: 26px;
+}
+.cp-accordian-item .panel-heading .panel-title > a{
+	font-size: 14px;
+}
+.cp-accordian-item .panel-heading .panel-title > a::after{
+	font-size: 12px;
+	height: 50px;
+	line-height: 50px;
+	width: 30px;
+}
+.cp-accordian-item .panel-heading .panel-title .micon{
+	font-size: 16px;
+	margin-right: 5px;
+	padding-right: 8px;
+}
+.cp-wrapper .cp-heading-style1_v1 h2,.cp-wrapper .cp-heading-style1_v2 h2{
+	font-size: 16px;
+}
+.cp-veterinarians-box .cp-text{
+	padding: 20px 15px;
+}
+.cp-veterinarians-box .cp-social-links li a{
+	font-size: 18px;
+}
+.cp-banner-inner-box h3{
+	margin: 0 0 10px;
+}
+#cp-slide-menu{
+	padding-left: 10px;
+}
+body h3{
+	font-size: 18px;
+}
+body p{
+	font-size: 14px;
+}
+
+
+
+}
+
+
+
+/*===========================================================================*/
+							/*360px CSS*/
+/*===========================================================================*/
+@media (max-width: 360px){
+.cp-header .cp-navigation-row .row .col-sm-2,.cp-header .cp-navigation-row .row .col-sm-10{
+	width: 100%;
+}
+.cp-logo{
+	display: block;
+	text-align: center;
+	margin: 0 0 20px;
+}
+.cp-nav-holder .cp-right-nav{
+	width: 100%;
+	text-align: center;
+}
+#cp-slide-menu{
+	width: 100%;
+}
+.cp_side-navigation .logo{
+	padding-right: 0;
+}
+.cp_side-navigation #close{
+	right: 10px;
+}
+.cp-gallery-item .cp-caption p,.cp-gallery-item .cp-caption .cp-gallery-meta,.cp-gallery-item .cp-caption:before{
+	display: none;
+}
+
+
+
+
+}
+
+/*===========================================================================*/
+							/*480px CSS*/
+/*===========================================================================*/
+@media (max-width: 480px) {
+#cp-banner-slider .cp-banner-content{
+	display: none;
+}	
+#cp-banner-slider .cp-banner-content h1{
+	font-size: 28px;
+	margin: 0 0 10px;
+}
+#cp-banner-slider .cp-banner-content h2{
+	font-size: 20px;
+	line-height: 20px;
+	margin: 0 0 15px;
+}
+.cp-banner-content .btn-care{
+	display: none;
+}
+.cp-btn-style1, .cp-btn-style2, .cp-btn-style3{
+	font-size: 16px;
+	padding: 12px 20px 10px;
+}
+#cp-banner-slider .owl-controls{
+	bottom: 0;
+	padding: 0;
+	text-align: center;
+}
+#cp-banner-slider .owl-controls .owl-nav .owl-prev,#cp-banner-slider .owl-controls .owl-nav .owl-next{
+	float: none;
+	display: inline-block;
+}
+#cp-banner-slider .owl-controls .owl-nav [class*="owl-"]{
+	height: 32px;
+	line-height: 32px;
+	width: 36px;
+}
+#cp-banner-slider .owl-controls .owl-nav .owl-prev::before, #cp-banner-slider .owl-controls .owl-nav .owl-next::before{
+	background-repeat: no-repeat;
+}
+.cp-heading-style1_v1 h2, .cp-heading-style1_v2 h2{
+	font-size: 20px;
+}
+.cp-wrapper .cp-home-contact-section .cp-contact-inner{
+	width: 100%;
+	padding: 50px 20px;
+}
+.cp-home-contact-section .cp-pet-animate{
+	display: none;
+}
+.cp_side-navigation .nav > li{
+	padding-left: 0px;
+}
+.cp-footer-nav ul li a{
+	text-transform: inherit;
+}
+.cp-banner-content .cp-btn-style2{
+	display: none;
+}
+.welcome-text-holder .cp-heading{
+	margin: 0 0 20px;
+}
+.cp-heading h2{
+	font-size: 40px;
+}
+.cp-facts-section .cp-facts-listd li{
+	width: 100%;
+	margin: 0 0 50px;
+}
+.cp-price-inner p,.cp-price-inner .price{
+	margin-right: 0;
+}
+.cp-price-inner p{
+	margin-bottom: 20px;
+}
+.cp-accordian-item .panel-heading .panel-title > a{
+	font-size: 16px;
+}
+.cp-accordian-item .panel-body{
+	padding: 10px  30px 20px 20px;
+}
+.cp-accordian-item .panel-heading .panel-title .micon{
+	font-size: 24px;
+	margin-right: 10px;
+}
+.cp-tabs-holder .nav-tabs,.cp-departments-section_v3 .cp-tabs-holder .tab-content{
+	width: 100%;
+}
+.cp-blog-item .cp-text h3{
+	font-size: 20px;
+}
+.cp-video-outer iframe{
+	height: 300px
+}
+.cp-blog-item .cp-text .cp-date-box{
+	width: 100%;
+	margin: 0 0 30px;
+}
+.cp-blog-item .cp-text .cp-inner{
+	float: left;
+	width: 100%;
+}
+.cp-blog-item .cp-text .cp-top .cp-social-links{
+	height: 40px;
+}
+.cp-comments-holder li ul{
+	padding-left: 30px;
+}
+.cp-comments-box .cp-round-img{
+	width: 70px;
+	height: 70px;
+}
+.cp-date-box span{
+	font-size: 20px;
+	line-height: 20px;
+}
+.cp-contact-inner .input-field label{
+	font-size: 16px;
+}
+.cp-error-section .title{
+	font-size: 140px;
+	line-height: 130px;
+}
+.cp-wrapper .cp-error-section h3{
+	font-size: 24px;
+}
+.cp-wrapper .cp-error-section h2{
+	font-size: 40px;
+	line-height: 30px;
+}
+.cp-error-section form .btn-submit{
+	font-size: 20px;
+	padding: 0 30px;
+}
+.cp-right-nav li:last-child{
+	margin-right: 0;
+}
+.cp-countdown-holder .countdown-section{
+	width: 50%;
+	margin: 0 0 50px;
+}
+.cp-countdown-holder .countdown-section:before{
+	display: none;
+}
+.cp-gallery-item .gallery-btn{
+	display: none;
+}
+#cp-contact-map{
+	height: 300px;
+}
+.cp-shop_table .product-brand,.cp-shop_table .product-remove,.cp-shop_table .product-thumbnail span{
+	display: none;
+}
+.cart-table-row table tr th, .cart-table-row table tr td{
+	padding: 20px 5px 15px;
+}
+.cp-show-result-outer{
+	padding: 15px 8px;
+}
+.cp-cart-bottom > a{
+	margin: 0 0 20px;
+}
+.cp-career-listed .cp-date-box2{
+	width: 100%;
+	margin: 0 0 30px;
+}
+.cp-career-listed .cp-text{
+	width: 100%;
+	float: left;
+	padding: 30px 0 0;
+	border-left: none;
+	border-top: 1px solid #ccc;
+}
+.cp-inner-banner .cp-inner-banner-outer h2{
+	font-size: 26px;
+}
+body h3{
+	font-size: 20px;
+}
+.cp-meta-listed li{
+	margin: 0 10px 10px 0;
+}
+.cp-blog-item .cp-text .cp-top .cp-social-links{
+	top: 60px;
+}
+.cp-gallery-item .cp-caption{
+	padding: 30px 50px;
+}
+.cp-gallery-item h3{
+	font-size: 20px;
+	margin: 0 0 5px;
+}
+.widget-search2 form input[type="text"]{
+	font-size: 18px;
+}
+
+
+
+
+}
+
+
+/*===========================================================================*/
+							/*767px CSS*/
+/*===========================================================================*/
+@media (max-width: 767px) {
+body{
+	overflow-x: hidden;
+}
+#cp-slide-menu::after{
+	display: none;
+}
+#cp-slide-menu{
+	float: left;
+	position: absolute;
+	clear: both;
+	top: 100%;
+	height: auto;
+	padding-bottom: 30px;
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+}
+.cp_side-navigation .logo{
+	display: none;
+}
+#cp-slide-menu .nav.navbar-nav{
+	float: left;
+	width: 100%;
+	margin: 30px 0 0;
+}
+.cp_side-navigation #close{
+	top: 20px;
+}
+.cp-banner-content h1{
+	font-size: 40px;
+	line-height: 30px;
+}
+.cp-banner-content h2{
+	font-size: 30px;
+	line-height: 26px;
+	margin-bottom: 25px;
+}
+.cp-banner #cp-banner-slider .cp-banner-content{
+	bottom: 30px;
+}
+.cp-services-banner .cp-services-banner-listed > li{
+	width: 100%;
+}
+.cp-welcome-thumb{
+	padding: 0;
+	margin: 0 0 30px;
+}
+.cp-welcome-thumb img{
+	width: 100%;
+	max-width: 100%;
+}
+.cp-veterinarians-box{
+	margin: 0 0 50px;
+}
+.cp-home-contact-section .cp-contact-inner{
+	width: 400px;
+	padding: 30px 20px;
+}
+.cp-footer-nav{
+	width: 100%;
+	margin: 0 0 30px;
+}
+.cp-footer-nav ul li{
+	margin-right: 15px;
+}
+.cp-copyright-row p{
+	width: 100%;
+	text-align: center;
+}
+.cp-navigation-row .row .col-sm-2{
+	width: auto;
+	float: left;
+}
+.cp-navigation-row .row .col-sm-10{
+	width: auto;
+	float: right;
+}
+.cp-home-contact-section .cp-pet-animate{
+	width: 300px;
+	height: 350px;
+	left: 0;
+}
+.cp-copyright-row::before{
+	background-size: 100%;
+}
+.cp-inner-banner-outer h2{
+	font-size: 36px;
+}
+.cp-facts-listd li{
+	width: 50%;
+	margin: 0 0 50px;
+}
+.cp-heading h2{
+	font-size: 40px;
+}
+.cp-blog-section .cp-blog-masonary .cp-masonary-item,.cp-gallery-section .cp-gallery-masonary .cp-masonary-item{
+	width: 100%;
+}
+.cp-error-section{
+	padding: 150px 0;
+}
+.cp-error-section h2{
+	margin: 0 0 30px;
+}
+.cp-error-section h3{
+	font-size: 30px;
+}
+.cp-pet-thumb{
+	float: left;
+	width: 100%;
+}
+.cp-pet-thumb img{
+	width: 100%;
+	max-width: 100%;
+}
+.cp-comingsoon-section{
+	padding-top: 70px;
+}
+.cp-coming-inner{
+	width: 100%;
+}
+.cp-coming-inner .title{
+	font-size: 50px;
+	line-height: 50px;
+}
+.cp-coming-inner h4{
+	font-size: 24px;
+}
+.cp-countdown-holder .countdown-amount{
+	font-size: 50px;
+	line-height: 40px;
+}
+.cp-countdown-holder .countdown-section:before{
+	font-size: 50px;
+	top: 0;
+}
+.cp-coming-inner form{
+	width: 100%;
+}
+.cp-gallery-item .gallery-btn{
+	margin: 0 0 20px;
+}
+.cp-gallery-item img{
+	width: 100%;
+	max-width: 100%;
+}
+.cp-cart-inner{
+	padding: 0;
+}
+.cp-pro-listing .cp-pro-item .cp-pro-img,.cp-pro-listing .cp-pro-item .cp-text{
+	width: 100%;
+}
+.cp-show-result-outer .showing{
+	width: 100%;
+	margin: 0 0 20px;
+	text-align: center;
+}
+.cp-show-result-outer .right-outer{
+	width: 100%;
+}
+.cp-show-result-outer .cp-btn-listing{
+	float: left;
+}
+.cp-product-slider2{
+	margin: 0 0 30px;
+}
+.cp-tab-box .nav-tabs > li > a{
+	font-size: 18px;
+	padding: 14px 15px;
+}
+.cart-table-row .woocommerce .cp-shop_table thead th{
+	font-size: 18px;
+}
+.cart-table-row .woocommerce .cp-shop_table td,.checkout-table-row .woocommerce .cp-shop_table p{
+	font-size: 16px;
+}
+.cp-team-thumb img{
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+.cp-team-detail .cp-about-text{
+	float: left;
+	width: 100%;
+	padding: 30px 0;
+}
+.cp-banner-content .btn-care{
+	display: none;
+}
+.pagination-box{
+	margin: 20px 0 30px;
+}
+
+
+.pd-tb100{
+	padding: 48px 0;
+}
+.pd-t100{
+	padding-top: 48px;
+}
+.pd-b100{
+	padding-bottom: 48px;
+}
+
+
+
+
+}
+
+
+/*===========================================================================*/
+						/*768px And 992px CSS*/
+/*===========================================================================*/
+@media (min-width: 768px) and (max-width: 992px) {
+.cp-banner-content h1{
+	font-size: 60px;
+}
+.cp-banner-content h2{
+	font-size: 36px;
+	line-height: 30px;
+	margin: 0 0 20px;
+}
+.cp-banner #cp-banner-slider .cp-banner-content{
+	bottom: 40px;
+}
+.cp-welcome-thumb{
+	padding: 0;
+	margin: 0 0 30px;
+}
+.cp-welcome-thumb img{
+	width: 100%;
+	max-width: 100%;
+}
+.cp-veterinarians-box{
+	margin: 0 0 50px;
+}
+.cp-banner-content .inner{
+	padding-left: 30px;
+}
+.cp-home-contact-section .cp-contact-inner{
+	width: 400px;
+	padding: 30px 25px;
+}
+.cp-home-contact-section .cp-pet-animate{
+	width: 400px;
+	height: 450px;
+	left: 0;
+}
+.cp-footer-nav{
+	width: 100%;
+	margin: 0 0 30px;
+}
+.cp-footer-nav ul li{
+	margin-right: 15px;
+}
+.cp-copyright-row::before{
+	background-size: 100%;
+}
+.cp-heading h2{
+	font-size: 40px;
+}
+.cp-meta-listed li{
+	margin-right: 10px;
+}
+.cp-error-section{
+	padding: 150px 0;
+}
+.cp-error-section h2{
+	margin: 0 0 30px;
+}
+.cp-error-section h3{
+	font-size: 30px;
+}
+.cp-pet-thumb{
+	float: left;
+	width: 100%;
+}
+.cp-pet-thumb img{
+	width: 100%;
+	max-width: 100%;
+}
+.cp-gallery-item img{
+	width: 100%;
+	max-width: 100%;
+}
+.cp-product-slider2{
+	margin: 0 0 30px;
+}
+.cp-team-thumb img{
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+.cp-team-detail .cp-about-text{
+	padding: 30px 0;
+	float: left;
+	width: 100%;
+}
+
+
+
+
+}
+
+
+/*===========================================================================*/
+						/*Media 1040px CSS*/
+/*===========================================================================*/
+@media (max-width: 1040px) {
+#cp-banner-slider .cp-banner-content{
+	bottom: 70px;
+}
+.cp-services-banner-listed > li{
+	width: 50%;
+}
+.cp-contact-inner{
+	width: 500px;
+}
+.cp-nav-holder .navbar-default{
+	display: none;
+}
+.cp-navigation-row{
+	padding: 20px 0;
+}
+#cp-slide-menu::after{
+	background-size: cover;
+	height: 200px;
+}
+.overlay{
+	background-size: cover;
+}
+.cp-banner-inner-box:hover{
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+.cp-nav-holder .cp-right-nav{
+	margin-top: 10px;
+}
+.cp-departments-section_v3{
+	padding-top: 0;
+}
+.cp-departments-section_v3 .container-fluid .row > .col-md-4,.cp-departments-section_v3 .container-fluid .row > .col-md-8{
+	width: 100%;
+}
+.cp-tabs-holder .cp-tabs-text{
+	padding: 30px 15px;
+}
+.cp-tabs-holder .nav-tabs > li > a{
+	font-size: 18px;
+	padding: 20px 10px;
+}
+.cp-blog-masonary .cp-masonary-item,.cp-gallery-masonary .cp-masonary-item{
+	width: 50%;
+}
+.cp-shop_table .product-size,.cp-shop_table .product-quantity{
+	display: none;
+}
+
+
+
+
+
+}
+
+/*===========================================================================*/
+							/*1200px CSS*/
+/*===========================================================================*/
+@media (min-width: 1200px) {
+.cp-error-section form{
+	width: 825px;
+}
+.gallery-full .cp-gallery-item .cp-caption{
+	padding: 50px 200px;
+}
+
+
+
+
+}
+
+
+/*===========================================================================*/
+							/*1400px CSS*/
+/*===========================================================================*/
+@media (min-width: 1400px) {
+.cp-home-contact-section .cp-pet-animate{
+	width: 400px;
+	height: 450px;
+}
+.cp-contact-inner{
+	float: none;
+}
+.mega-col-1{
+	min-width: 750px;
+}
+.mega-col-1 > ul,.mega-col-1 .cp-mega-listed{
+	width: 24%;
+}
+.mega-col-1 .cp-mega-listed.none{
+	display: block;
+}
+.mega-blog{
+	min-width: 545px;
+}
+
+
+
+
+}
+
+/*===========================================================================*/
+							/*1700px CSS*/
+/*===========================================================================*/
+@media (min-width: 1600px) {
+.cp-banner-inner-box h4 span{
+
+}
+.cp-banner-inner-box h3{
+	font-size: 30px;
+}
+.cp-banner-inner-box h4{
+	font-size: 24px;
+}
+.cp-banner-inner-box .phone{
+	font-size: 36px;
+	line-height: 34px;
+}
+.cp-banner-inner-box h4 span{
+	font-size: 48px;
+}
+#cp-banner-slider .owl-controls{
+	padding: 0 95px;
+}
+.cp-tabs-holder .nav-tabs > li > a{
+	font-size: 30px;
+	line-height: 30px;
+	padding: 30px 20px;
+}
+
+
+
+
+}
+
+
+@media (min-width: 1700px) {
+.mega-col-1{
+	width: 1000px;
+}
+.cp-tabs-holder .cp-tabs-text{
+	width: 560px;
+}
+.cp-banner-inner-box{
+	padding: 50px 60px;
+}
+.cp-mega-item .cp-text h3{
+	font-size: 24px;
+}
+.cp-mega-item .cp-text .price{
+	font-size: 18px;
+}
+.cp-home-contact-section .cp-pet-animate{
+	width: 500px;
+	height: 587px;
+}
+.cp-tabs-holder .nav-tabs > li > a{
+	font-size: 30px;
+	line-height: 30px;
+	padding: 40px 20px;
+}
+
+
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+pubs_homepage:
+    path:     /
+    defaults: { _controller: PubsBundle:Default:index }
+
+redirect:
+    path:     /redirect
+    defaults: { _controller: PubsBundle:Default:Redirection }
+
+pubs_homepageAdmin:
+    path:     /indexAdmin
+    defaults: { _controller: PubsBundle:Default:indexAdmin }
+pubs_:
+    path:     /pubs
+    defaults: { _controller: PubsBundle:Pubs:Pubs }
+pubs:
+    path:     /pubsadd
+    defaults: { _controller: PubsBundle:Pubs:Add }
+
+onepub:
+    path:     /onepub
+    defaults: { _controller: PubsBundle:Pubs:onepub }
+modifpub:
+    path:     /modifpub/{id}/
+    defaults: { _controller: PubsBundle:Pubs:modifpub }
+supprimerpub:
+    path:     /suppub/{id}/
+    defaults: { _controller: PubsBundle:Pubs:supp }
+supprimerpubb:
+    path:     /suppubb/{id}/
+    defaults: { _controller: PubsBundle:Pubs:suppb }
+signalerpub:
+    path:     /signal/{idpub}/
+    defaults: { _controller: PubsBundle:Pubs:signal }
+pubs_stat:
+    path:     /stat
+    defaults: { _controller: PubsBundle:Pubs:indexx }
+pub_nom:
+    path:     /aaa
+    defaults: { _controller: PubsBundle:Pubs:getnom }
+
+backpubs:
+    path:     /backpubs
+    defaults: { _controller: PubsBundle:Pubs:showPublication }
+backinsultes:
+    path:     /backinsultes
+    defaults: { _controller: PubsBundle:Insulte:showInsultes}
+addinsultes:
+    path:     /addinsultes
+    defaults: { _controller: PubsBundle:Insulte:addInsultes}
+all:
+    path:     /pubs/all
+    defaults: { _controller: PubsBundle:Pubs:all}
+find_pub:
+    path:     /pubs/find/{id}
+    defaults: { _controller: PubsBundle:Pubs:find}
+create_pub:
+    path:     /pubs/new
+    defaults: { _controller: PubsBundle:Pubs:new}
+signal_pub:
+    path:     /pubs/signaler
+    defaults: { _controller: PubsBundle:Pubs:signaler}

@@ -1,0 +1,289 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Gallery</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Pages</li>
+                    <li class="active">Adoption Map</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <section class="cp-product-section pd-t100">
+
+
+        <a href="{{ path('adopt_convertoxml') }}" class="gallery-btn">Refresh</a>
+
+    </section><!--Products Section End-->
+
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+
+
+        <style>
+            /* Always set the map height explicitly to define the size of the div
+             * element that contains the map. */
+            #map {
+                height: 1000px;
+            }
+            /* Optional: Makes the sample page fill the window. */
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+        <div id="map"></div>
+
+        <script>
+            var customLabel = {
+                restaurant: {
+                    label: 'R'
+                },
+                bar: {
+                    label: 'B'
+                }
+            };
+
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 36.8064948, lng: 10.1815316},
+                    zoom: 12,
+                    styles: [
+                        {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                        {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                        {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                        {
+                            featureType: 'administrative.locality',
+                            elementType: 'labels.text.fill',
+                            stylers: [{color: '#d59563'}]
+                        },
+                        {
+                            featureType: 'poi',
+                            elementType: 'labels.text.fill',
+                            stylers: [{color: '#d59563'}]
+                        },
+                        {
+                            featureType: 'poi.park',
+                            elementType: 'geometry',
+                            stylers: [{color: '#263c3f'}]
+                        },
+                        {
+                            featureType: 'poi.park',
+                            elementType: 'labels.text.fill',
+                            stylers: [{color: '#6b9a76'}]
+                        },
+                        {
+                            featureType: 'road',
+                            elementType: 'geometry',
+                            stylers: [{color: '#38414e'}]
+                        },
+                        {
+                            featureType: 'road',
+                            elementType: 'geometry.stroke',
+                            stylers: [{color: '#212a37'}]
+                        },
+                        {
+                            featureType: 'road',
+                            elementType: 'labels.text.fill',
+                            stylers: [{color: '#9ca5b3'}]
+                        },
+                        {
+                            featureType: 'road.highway',
+                            elementType: 'geometry',
+                            stylers: [{color: '#746855'}]
+                        },
+                        {
+                            featureType: 'road.highway',
+                            elementType: 'geometry.stroke',
+                            stylers: [{color: '#1f2835'}]
+                        },
+                        {
+                            featureType: 'road.highway',
+                            elementType: 'labels.text.fill',
+                            stylers: [{color: '#f3d19c'}]
+                        },
+                        {
+                            featureType: 'transit',
+                            elementType: 'geometry',
+                            stylers: [{color: '#2f3948'}]
+                        },
+                        {
+                            featureType: 'transit.station',
+                            elementType: 'labels.text.fill',
+                            stylers: [{color: '#d59563'}]
+                        },
+                        {
+                            featureType: 'water',
+                            elementType: 'geometry',
+                            stylers: [{color: '#17263c'}]
+                        },
+                        {
+                            featureType: 'water',
+                            elementType: 'labels.text.fill',
+                            stylers: [{color: '#515c6d'}]
+                        },
+                        {
+                            featureType: 'water',
+                            elementType: 'labels.text.stroke',
+                            stylers: [{color: '#17263c'}]
+                        }
+                    ]
+                });
+
+                var myLatlng = new google.maps.LatLng(36.7851873,10.1811438);
+
+                {% for p in pets %}
+                console.log({{ p.idPet }});
+
+                console.log("{{ p.city }}");
+
+
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    title:"Hello World!"
+                });
+
+                {% endfor %}
+
+
+// To add the marker to the map, call setMap();
+                //marker.setMap(map);
+
+                var infoWindow = new google.maps.InfoWindow;
+
+                // Try HTML5 geolocation.
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+
+                        var myLatlngg = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+
+                        var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+
+                        var marker = new google.maps.Marker({
+                            position: myLatlngg,
+                            title:"This is your actual location.",
+                            icon:{
+                                url: 'https://raw.githubusercontent.com/googlemaps/js-marker-clusterer/gh-pages/images/heart50.png'
+                            },
+                            shadow:{
+                                path:google.maps.SymbolPath.CIRCLE,
+                                scale: 10
+                            }
+                        });
+
+                        marker.setMap(map);
+
+                        infoWindow.setPosition(pos);
+                        infoWindow.setContent('Location found.');
+                        map.setCenter(pos);
+                        console.log("eee");
+                    }, function() {
+                        handleLocationError(true, infoWindow, map.getCenter());
+                    });
+                } else {
+                    // Browser doesn't support Geolocation
+                    handleLocationError(false, infoWindow, map.getCenter());
+                }
+
+
+                function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent(browserHasGeolocation ?
+                        'Error: The Geolocation service failed.' :
+                        'Error: Your browser doesn\'t support geolocation.');
+                }
+
+                // Change this depending on the name of your PHP or XML file
+                downloadUrl('http://localhost/xml/xmlLog.xml', function(data) {
+                    var xml = data.responseXML;
+                    var markers = xml.documentElement.getElementsByTagName('marker');
+                    Array.prototype.forEach.call(markers, function(markerElem) {
+                        var name = markerElem.getAttribute('name');
+                        var id = markerElem.getAttribute('id');
+                        var address = markerElem.getAttribute('adress');
+                        var type = markerElem.getAttribute('type');
+                        var point = new google.maps.LatLng(
+                            parseFloat(markerElem.getAttribute('lat')),
+                            parseFloat(markerElem.getAttribute('lng')));
+
+                        /*
+                        var infowincontent = document.createElement('div');
+                        var strong = document.createElement('strong');
+                        strong.textContent = name;
+                        infowincontent.appendChild(strong);
+                        infowincontent.appendChild(document.createElement('br'));
+                        var text = document.createElement('text');
+                        text.textContent = address;
+
+                        infowincontent.appendChild(text);
+                        */
+
+                        var contentString = '<div id="content">'+
+                            '<div id="siteNotice">'+
+                            '</div>'+
+                            '<h1 id="firstHeading" class="firstHeading"><a href="myProfile/'+id+'/">'+ name +'</a></h1>'+
+                            '<div id="bodyContent">'+
+                            '<p>Address: '+ address +'</p>'+
+                            '</div>'+
+                            '</div>';
+
+
+                        var icon = customLabel[type] || {};
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: point,
+                            label: icon.label
+                        });
+                        marker.addListener('click', function() {
+                            infoWindow.setContent(contentString);
+                            infoWindow.open(map, marker);
+                            //window.location.href = "myProfile/"+id+"/";
+                        });
+
+
+                    });
+                });
+            }
+
+
+
+            function downloadUrl(url, callback) {
+                var request = window.ActiveXObject ?
+                    new ActiveXObject('Microsoft.XMLHTTP') :
+                    new XMLHttpRequest;
+
+                request.onreadystatechange = function() {
+                    if (request.readyState == 4) {
+                        request.onreadystatechange = doNothing;
+                        callback(request, request.status);
+                    }
+                };
+
+                request.open('GET', url, true);
+                request.send(null);
+            }
+
+            function doNothing() {}
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVd1zxw6RyTXsutTpBuvVnOazwBWxs8Ok
+&callback=initMap">
+        </script>
+
+
+    </div><!--Main Content End-->
+{% endblock content %}

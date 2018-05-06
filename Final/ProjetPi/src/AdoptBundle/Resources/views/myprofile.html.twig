@@ -1,0 +1,64 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+
+
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>MY PROFILE</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Pages</li>
+                    <li class="active">Our vets detail</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Team Detail Section Start-->
+        <section class="cp-team-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <!--Team Thumb Start-->
+                        <figure class="cp-team-thumb">
+                            <img src="{{ asset('images/'~Pets.petImage) }}" style="width: 570px; height: 755px" alt="">
+                        </figure><!--Team Thumb End-->
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <!--About Text Start-->
+                        <div class="cp-about-text">
+                            <h3>Hello, I am {{ Pets.namePet }}</h3>
+                            <div class="cp-top">
+                                <span class="desination">{{ Pets.breed }}</span>
+                                <ul class="cp-social-links">
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                            <p class="first">{{ Pets.age }}, {{ Pets.sex }}, {{ Pets.color }}</p>
+                            <p>description: {{ Pets.description }}</p>
+
+                            <p>Praesent odio tellus, posuere sed, dictum sed, fermentum at, orci. Aenean arcu tortor, suscipit vitae, hendrerit condimentum, dapibus ac, nulla. Curabitur sit consectetuer ipsum dolor sit amet justo et sit amet justo consectetuer adipiscing elit.</p>
+                            <div class="cp-bottom">
+                                <a href="{{ path('adopt_modifier',{'id': Pets.idPet }) }}" class="cp-btn-style1">EDIT MY PROFILE</a>
+                                <a href="{{ path('adopt_supprimerPet',{'id': Pets.idPet }) }}" class="cp-btn-style1">DESACTIVATE MY PROFILE</a>
+                            </div>
+                        </div><!--About Text End-->
+                    </div>
+                </div>
+            </div>
+        </section><!--Team Detail Section End-->
+
+    </div><!--Main Content End-->
+
+    </div><!--Main Content End-->
+
+
+{% endblock content %}

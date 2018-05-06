@@ -1,0 +1,66 @@
+{% extends ":Layout:layoutAdmin.html.twig" %}
+
+{% block content %}
+
+    <div class="content mt-3">
+
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title">Basic Table</strong>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Breed</th>
+                        <th scope="col">Sex</th>
+                        <th scope="col">Governate</th>
+                        <th scope="col">Pet Image</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">  </th>
+
+                    </tr>
+                    </thead>
+                    {% for pets in pets %}
+                        <tbody>
+                        <tr>
+                            <td class="py-1">
+                                {{ pets.namePet }}
+                            </td>
+                            <td>
+                                {{ pets.breed }}
+                            </td>
+                            <td>
+                                {{ pets.sex }}
+                            </td>
+                            <td>
+                                {{ pets.governate }}
+                            </td>
+                            <td>
+                                <img src="{{ asset('images/'~pets.petImage) }}" style="width: 100px; height: 70px" alt="">
+                            </td>
+                            <td>
+                                {{ pets.description }}
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" href="{{  path('adopt_supprimerPetBack',{'id': pets.idPet }) }}">Supprimer</a>
+
+                            </td>
+
+                        </tr>
+
+
+
+
+
+
+                        </tbody>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

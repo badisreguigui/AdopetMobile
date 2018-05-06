@@ -1,0 +1,81 @@
+{% extends ":Layout:LayoutAdmin.html.twig" %}
+
+{% block content %}
+
+    <div class="content mt-3">
+
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title">Liste des produits</strong>
+            </div>
+            <div class="card-header">
+                <a href="{{ path('shop_Ajouter') }}">+ Ajouter un Produit</a>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Catégorie</th>
+                        <th scope="col">Race</th>
+                        <th scope="col">Boutique</th>
+                        <th scope="col">  </th>
+                        <th scope="col">  </th>
+                    </tr>
+                    </thead>
+                    {% for produit in produits %}
+                        <tbody>
+                        <tr>
+                            <td >
+                                {{ produit.nomproduit }}
+                            </td>
+                            <td>
+                                {{ produit.description }}
+                            </td>
+                            <td>
+                                {{  produit.prix }}DT
+                            </td>
+                            <td>
+                                {{ produit.quantite }}
+                            </td>
+                            <td>
+                                <img src="{{ asset('images/Produits/'~produit.imageproduit) }}" width="50" height="50">
+                            </td>
+                            <td>
+                                {{ produit.idcategorie.getNomcategorie() }}
+                            </td>
+                            <td>
+                                {{ produit.nomraceproduit }}
+                            </td>
+                            <td>
+                                {{ produit.idboutiqueproduit.getNomboutique() }}
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" href="{{ path('_fetchprod', { 'idproduit': produit.idproduit }) }}">Modifier</a>
+
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" href="{{ path('shop_Supprimer', { 'idproduit': produit.idproduit }) }}">Supprimer</a>
+
+                            </td>
+
+                        </tr>
+
+
+
+
+
+
+                        </tbody>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

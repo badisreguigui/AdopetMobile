@@ -1,0 +1,76 @@
+{% extends ":Layout:layoutAdmin.html.twig" %}
+
+{% block content %}
+
+    <!-- Right Panel -->
+
+
+    <!-- Header-->
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+
+
+            <div class="row">
+                <div class="col-lg-6" style="margin-left: 25%;">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Produit</strong>
+                        </div>
+                        <div class="card-body">
+                            <!-- Credit Card -->
+                            <div id="pay-invoice">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h3 class="text-center">Modifier un Produit</h3>
+                                    </div>
+                                    <hr>
+                                    <form action="{{ path('shop_ModifierBoutique') }}" method="post"  class="form-horizontal">
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nom</label></div>
+                                            <div class="col-12 col-md-9"><input type="text" value="{{ boutique.nomboutique }}" id="text-input" name="nomboutique" placeholder="" class="form-control"></div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Telephone</label></div>
+                                            <div class="col-12 col-md-9"><input type="number" id="text-input" name="telboutique" value="{{ boutique.telboutique }}" placeholder="" class="form-control"></div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Adresse</label></div>
+                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="adresseboutique" value="{{ boutique.adresseboutique }}" placeholder="Quantite" class="form-control"></div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="file-input" class=" form-control-label">Image de la boutique</label></div>
+                                            <input type="file" name="imageboutique" {{ boutique.imageboutique }}>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-dot-circle-o"></i> Modifier
+                                        </button>
+                                        <input name="id" type="hidden" value="{{ boutique.getIdboutique() }}">
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div> <!-- .card -->
+
+                </div><!--/.col-->
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </div><!-- .animated -->
+    </div><!-- .content -->
+
+
+{% endblock content %}

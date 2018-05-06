@@ -1,0 +1,4 @@
+services:
+#    pet_sitting.example:
+#        class: PetSittingBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
