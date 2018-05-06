@@ -34,7 +34,6 @@ import com.codename1.ui.Toolbar;
  * of building native mobile applications using Java.
  */
 public class CleanModern {
-    
 
     private Form current;
     private Resources theme;
