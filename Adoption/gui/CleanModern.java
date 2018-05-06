@@ -67,6 +67,5 @@ public class CleanModern {
     
     public void destroy() {
     }
-
     
 }
