@@ -19,6 +19,7 @@
 
 package com.mycompany.gui;
 
+
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.ui.Component;
 import com.codename1.ui.Display;
