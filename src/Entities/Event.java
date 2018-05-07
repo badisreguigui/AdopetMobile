@@ -59,7 +59,7 @@ public class Event {
 
     public String getLieu() {
         return lieu;
-    }
+    } 
 
     public void setLieu(String lieu) {
         this.lieu = lieu;
